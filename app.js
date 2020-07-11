@@ -71,7 +71,7 @@ search.addEventListener("input", function(){
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function(element){
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
-        if(cardTxt.includes(inputVal)){
+        if(cardTxt.includes(tolLowerCase(inputVal))){
             element.style.display = "block";
         }
         else{
